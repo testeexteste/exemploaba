@@ -1,0 +1,510 @@
+<h3></h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="nf_principal.startInserting()" ng-hide="nf_principal.inserting || nf_principal.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="nf_principal" entity="api/cronapi/crud/app.entity.nf_principal" keys="cod_nf" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-nf_principal">
+    <div crn-datasource="nf_principal" class="" ng-hide="nf_principal.editing || nf_principal.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Cód. NF</div>
+                </th>
+                <th class="">
+                    <div class="">Número NFe</div>
+                </th>
+                <th class="">
+                    <div class="">Número NFCe</div>
+                </th>
+                <th class="">
+                    <div class="">Série</div>
+                </th>
+                <th class="">
+                    <div class="">Chave</div>
+                </th>
+                <th class="">
+                    <div class="">Data Emissão</div>
+                </th>
+                <th class="">
+                    <div class="">Hora  Emissão</div>
+                </th>
+                <th class="">
+                    <div class="">Data  Saída</div>
+                </th>
+                <th class="">
+                    <div class="">Hora Saída</div>
+                </th>
+                <th class="">
+                    <div class="">Data Conting.</div>
+                </th>
+                <th class="">
+                    <div class="">Hora Conting.</div>
+                </th>
+                <th class="">
+                    <div class="">Situação</div>
+                </th>
+                <th class="">
+                    <div class="">Nat. Oper.</div>
+                </th>
+                <th class="">
+                    <div class="">Regime Tributario</div>
+                </th>
+                <th class="">
+                    <div class="">Cód. Finalidade</div>
+                </th>
+                <th class="">
+                    <div class="">Cód. Indicador Presenca</div>
+                </th>
+                <th class="">
+                    <div class="">Cód. Par.</div>
+                </th>
+                <th class="">
+                    <div class="">Vendedor</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_nf  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.numero_nfe  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.numero_nfce  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.serie  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.chave  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.data_emissao | mask:'date'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.hora_emissao | mask:'time'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.data_saida | mask:'date'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.hora_saida | mask:'time'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.data_conting | mask:'date'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.hora_conting | mask:'time'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.situacao  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.nat_oper  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.regime_trib  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_finalidade  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_indicador_presenca  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_par  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.vendedor  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-nf_principal">
+    <div class="form" ng-show="nf_principal.editing || nf_principal.inserting">
+        <form crn-datasource="nf_principal" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br/>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-numero_nfe" class="">
+                    <div class="form-group">
+                        <label for="textinput-numero_nfe" class="">Número NFe</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="nf_principal.active.numero_nfe"
+                                            class="form-control"
+                                            id="textinput-numero_nfe"
+                                            placeholder="Número NFe"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-numero_nfce" class="">
+                    <div class="form-group">
+                        <label for="textinput-numero_nfce" class="">Número NFCe</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="nf_principal.active.numero_nfce"
+                                            class="form-control"
+                                            id="textinput-numero_nfce"
+                                            placeholder="Número NFCe"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-serie" class="">
+                    <div class="form-group">
+                        <label for="textinput-serie" class="">Série</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="3"
+                                            type="text"
+                                            ng-model="nf_principal.active.serie"
+                                            class="form-control"
+                                            id="textinput-serie"
+                                            placeholder="Série"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-chave" class="">
+                    <div class="form-group">
+                        <label for="textinput-chave" class="">Chave</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="44"
+                                            type="text"
+                                            ng-model="nf_principal.active.chave"
+                                            class="form-control"
+                                            id="textinput-chave"
+                                            placeholder="Chave"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-data_emissao" class="">
+                    <div class="form-group">
+                        <label for="textinput-data_emissao" class="">Data Emissão</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="date"
+                                            ng-model="nf_principal.active.data_emissao"
+                                            class="form-control"
+                                            id="textinput-data_emissao"
+                                            placeholder="Data Emissão"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-hora_emissao" class="">
+                    <div class="form-group">
+                        <label for="textinput-hora_emissao" class="">Hora  Emissão</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="time"
+                                            ng-model="nf_principal.active.hora_emissao"
+                                            class="form-control"
+                                            id="textinput-hora_emissao"
+                                            placeholder="Hora  Emissão"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-data_saida" class="">
+                    <div class="form-group">
+                        <label for="textinput-data_saida" class="">Data  Saída</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="date"
+                                            ng-model="nf_principal.active.data_saida"
+                                            class="form-control"
+                                            id="textinput-data_saida"
+                                            placeholder="Data  Saída"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-hora_saida" class="">
+                    <div class="form-group">
+                        <label for="textinput-hora_saida" class="">Hora Saída</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="time"
+                                            ng-model="nf_principal.active.hora_saida"
+                                            class="form-control"
+                                            id="textinput-hora_saida"
+                                            placeholder="Hora Saída"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-data_conting" class="">
+                    <div class="form-group">
+                        <label for="textinput-data_conting" class="">Data Conting.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="date"
+                                            ng-model="nf_principal.active.data_conting"
+                                            class="form-control"
+                                            id="textinput-data_conting"
+                                            placeholder="Data Conting."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-hora_conting" class="">
+                    <div class="form-group">
+                        <label for="textinput-hora_conting" class="">Hora Conting.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="time"
+                                            ng-model="nf_principal.active.hora_conting"
+                                            class="form-control"
+                                            id="textinput-hora_conting"
+                                            placeholder="Hora Conting."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-situacao" class="">
+                    <div class="form-group">
+                        <label for="textinput-situacao" class="">Situação</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="20"
+                                            type="text"
+                                            ng-model="nf_principal.active.situacao"
+                                            class="form-control"
+                                            id="textinput-situacao"
+                                            placeholder="Situação"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-nat_oper" class="">
+                    <div class="form-group">
+                        <label for="textinput-nat_oper" class="">Nat. Oper.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="nf_principal.active.nat_oper"
+                                            class="form-control"
+                                            id="textinput-nat_oper"
+                                            placeholder="Nat. Oper."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-regime_trib" class="">
+                    <div class="form-group">
+                        <label for="textinput-regime_trib" class="">Regime Tributario</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="3"
+                                            type="text"
+                                            ng-model="nf_principal.active.regime_trib"
+                                            class="form-control"
+                                            id="textinput-regime_trib"
+                                            placeholder="Regime Tributario"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cod_finalidade" class="">
+                    <div class="form-group">
+                        <label for="textinput-cod_finalidade" class="">Cód. Finalidade</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="nf_principal.active.cod_finalidade"
+                                            class="form-control"
+                                            id="textinput-cod_finalidade"
+                                            placeholder="Cód. Finalidade"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cod_indicador_presenca" class="">
+                    <div class="form-group">
+                        <label for="textinput-cod_indicador_presenca" class="">Cód. Indicador Presenca</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="1"
+                                            type="integer"
+                                            ng-model="nf_principal.active.cod_indicador_presenca"
+                                            class="form-control"
+                                            id="textinput-cod_indicador_presenca"
+                                            placeholder="Cód. Indicador Presenca"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cod_par" class="">
+                    <div class="form-group">
+                        <label for="textinput-cod_par" class="">Cód. Par.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="nf_principal.active.cod_par"
+                                            class="form-control"
+                                            id="textinput-cod_par"
+                                            placeholder="Cód. Par."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-vendedor" class="">
+                    <div class="form-group">
+                        <label for="textinput-vendedor" class="">Vendedor</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="40"
+                                            type="text"
+                                            ng-model="nf_principal.active.vendedor"
+                                            class="form-control"
+                                            id="textinput-vendedor"
+                                            placeholder="Vendedor"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->

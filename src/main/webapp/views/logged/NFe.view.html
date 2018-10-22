@@ -1,0 +1,837 @@
+<div class="page-header component-holder col-md-12" data-component="crn-header" id="crn-header-650593" style="margin-top: -5px"> 
+  <h1 class="component-holder text-left" xattr-position="text-left" data-component="crn-title" id="crn-title1132">Emissão de Nota Fiscal</h1> 
+</div> 
+<div class="component-holder ng-binding ng-scope  col-md-12" data-component="crn-tabs" id="crn-tabs-682382"> 
+  <div class="ctn-tab"> 
+    <ul class="nav nav-tabs" role="tablist"> 
+      <li role="presentation" class="active"><a data-target="#tab1" role="tab" data-toggle="tab">Principal</a></li> 
+      <li role="presentation" class=""><a data-target="#tab2" role="tab" data-toggle="tab">Destinatário</a></li> 
+      <li role="presentation" class=""><a data-target="#tab2344" role="tab" data-toggle="tab">Produtos</a></li> 
+      <li role="presentation" class=""><a data-target="#tab7500" role="tab" data-toggle="tab">Cálculos / Impostos</a></li> 
+      <li role="presentation" class=""><a data-target="#tab9887" role="tab" data-toggle="tab">Transporte</a></li> 
+      <li role="presentation" class=""><a data-target="#tab3302" role="tab" data-toggle="tab">Financeiro</a></li> 
+    </ul> 
+    <div class="tab-content"> 
+      <div role="tabpanel" class="tab-pane active" id="tab1"> 
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-top: 10px"> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-426179"> 
+            <div class="form-group"> 
+              <label for="">Tipo de Saída</label> 
+              <ui-select crn-datasource="[{'key':'1','value':'NFe'},{'key':'2','value':'NFCe'}]" ng-model="vars.combobox1059" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-471006"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Número NFe</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9457" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-1" data-component="crn-textinput" id="crn-textinput-471007"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Série</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9455" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-471006"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Data Emissão</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9455" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-1" data-component="crn-textinput" id="crn-textinput-471006"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Hora</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9455" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-471006"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Data Saída</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9456" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-1" data-component="crn-textinput" id="crn-textinput-471006" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Hora</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9455" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-top: 0px"> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-textinput" id="crn-textinput-471006"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Situação</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9455" class="form-control" id="input9455" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-254906"> 
+            <div class="form-group"> 
+              <label for="">Natureza da Operação</label> 
+              <ui-select crn-datasource="[{'key':'1','value':'VENDA DE MERCADORIA'}]" ng-model="vars.combobox2834" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-158668"> 
+            <div class="form-group"> 
+              <label for="">Regime Tributário</label> 
+              <ui-select crn-datasource="[{'key':'SIM','value':'SIMPLES NACIONAL'},{'key':'NOR','value':'REGIME NORMAL'}]" ng-model="vars.combobox8175" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-788884"> 
+            <div class="form-group"> 
+              <label for="">Finalidade</label> 
+              <ui-select crn-datasource="[{'key':'1','value':'NFe - NORMAL'},{'key':'2','value':'NFe - COMPLEMENTAR'},{'key':'3','value':'NFe - AJUSTE'},{'key':'4','value':'NFe - DEVOLUÇÃO'}]" ng-model="vars.combobox1699" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-top: 0px"> 
+          <div class="component-holder ng-binding ng-scope  col-md-5" data-component="crn-combobox" id="crn-combobox-254906"> 
+            <div class="form-group"> 
+              <label for="">Indicador de Presença</label> 
+              <ui-select crn-datasource="[{'key':'0','value':'NÃO SE APLICA ( PARA NF COMPL. OU AJUSTE'},{'key':'1','value':'OPERAÇÃO PRESENCIAL'},{'key':'2','value':'OPERAÇÃO NÃO PRESENCIAL, PELA INTERNET'},{'key':'3','value':'OPERAÇÃO NÃO PRESENCIAL, TELEATENDIMENTO'},{'key':'4','value':'NFC-e EM OPERAÇÃO COM ENTREGA EM DOMIÍLIO'},{'key':'9','value':'OPERAÇÃO NÃO PRESENCIAL, OUTROS.'}]" ng-model="vars.combobox2834" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div>
+          
+          <div class="component-holder ng-binding ng-scope  col-md-4" data-component="crn-textinput" id="crn-textinput-938323"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Vendedor</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6907" class="form-control" id="input6907" placeholder=""> 
+                </div> 
+              </div> 
+           
+           
+        </div> 
+      </div> 
+      <div role="tabpanel" class="tab-pane" id="tab2"> 
+        <div class="row component-holder col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-426245"> 
+        </div> 
+        <div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-418673"> 
+        </div> 
+        <div class="row component-holder col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-287508" style="margin-top: 10px"> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+              <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinputbutton" id="crn-textinputbutton-codcli"> 
+            <div> 
+              <label class="form-group" for="btnBuscaProd">Cód. Dest.</label> 
+              <div class="input-group"> 
+                <input id="inputButton6888" style="margin-top: -10px" type="text" mask="" mask-placeholder="" ng-required="false" class="form-control" ng-model="empresas.active.cod_cid" placeholder=""> 
+                <div class="input-group-btn"> 
+                  <button class="btn component-holder btn-default" style="margin-top: -10px" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-306697s"><i class="glyphicon glyphicon-search"></i> <span></span></button> 
+                </div> 
+              </div> 
+              <!-- /input-group --> 
+            </div> 
+          </div>
+
+<div data-component="crn-textinput" id="crn-textinput-razao" class="col-md-5"> 
+                <div class="form-group"> 
+                  <label for="textinput-razao" class="">Razão Social</label> 
+                  <!-- else for if !model.hasCronappFramework() --> 
+                  <input maxlength="60" type="text" ng-model="empresas.active.razao" class="form-control" id="textinput-razao" placeholder="" mask="" mask-placeholder="" ng-required="false"> 
+                  <!-- end if !model.hasCronappFramework() --> 
+                </div> 
+              </div><div data-component="crn-textinput" id="crn-textinput-cnpj" class="col-md-3"> 
+                <div class="form-group"> 
+                  <label for="textinput-razao" class="">CNPJ / CPF</label> 
+                  <!-- else for if !model.hasCronappFramework() --> 
+                  <input maxlength="60" type="text" ng-model="empresas.active.razao" class="form-control" id="textinput-razao" placeholder="" mask="" mask-placeholder="" ng-required="false"> 
+                  <!-- end if !model.hasCronappFramework() --> 
+                </div> 
+              </div> 
+               
+              <div data-component="crn-textinput" id="crn-textinput-rg_ie" class="col-md-2"> 
+                <div class="form-group"> 
+                  <label for="textinput-rg_ie" class="">RG / IE</label> 
+                  <!-- else for if !model.hasCronappFramework() --> 
+                  <input maxlength="15" type="text" ng-model="empresas.active.rg_ie" class="form-control" id="textinput-rg_ie" placeholder="" mask="" mask-placeholder="" ng-required="false"> 
+                  <!-- end if !model.hasCronappFramework() --> 
+                </div> 
+              </div> 
+            </div><div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+            <div class="component-holder ng-binding ng-scope  col-md-4" data-component="crn-combobox" id="crn-combobox-218334"> 
+              <div class="form-group"> 
+                <label for="">Tipo Pessoa</label> 
+                <ui-select crn-datasource="[{'key':'F','value':'FÍSICA'},{'key':'J','value':'JURÍDICA'}]" ng-model="vars.combobox4329" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.value}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                    <div class="">
+                       {{rowData.value}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope  col-md-4" data-component="crn-combobox" id="crn-combobox-254699"> 
+              <div class="form-group"> 
+                <label for="">Tipo Contribuinte</label> 
+                <ui-select crn-datasource="[{'key':'1','value':'CONTRIBUINTE DE ICMS'},{'key':'2','value':'CONTRIBUINTE ISENTO'},{'key':'3','value':'NÃO CONTRIBUINTE'}]" ng-model="vars.combobox3804" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.value}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                    <div class="">
+                       {{rowData.value}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-checkbox" id="crn-checkbox-901379" style="margin-top: 30px"> 
+              <div class="form-group"> 
+                <label for="textinput-nome" class="" xattr-fullsize="display:block;"><input type="checkbox" ng-model="vars.checkbox3194" ng-true-value="true" ng-false-value="false"> <span>Consumidor Final</span></label> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-447568"> 
+             
+          </div> 
+          <div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-447568"> 
+            <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+              <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-494187"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">CEP</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6698" class="form-control" id="input6698" placeholder=""> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-8" data-component="crn-textinput" id="crn-textinput-836813"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Endereço</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input1195" class="form-control" id="input1195" placeholder=""> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-980786"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Número</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input8492" class="form-control" id="input8492" placeholder=""> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-447568"> 
+            <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+              <div class="component-holder ng-binding ng-scope  col-md-4" data-component="crn-textinput" id="crn-textinput-795066"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Complemento</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5501" class="form-control" id="input5501" placeholder=""> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-textinput" id="crn-textinput-455377"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Bairro</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2146" class="form-control" id="input2146" placeholder=""> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-combobox" id="crn-combobox-338001"> 
+                <div class="form-group"> 
+                  <label for="">UF</label> 
+                  <ui-select crn-datasource="[{'key': 1,'value':'Value 1'},{'key': 2,'value':'Value 2'},{'key': 3,'value':'Value 3'}]" ng-model="vars.combobox8956" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                    <ui-select-match placeholder="Select..." class="">
+                       {{$select.selected.value}} 
+                    </ui-select-match> 
+                    <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                      <div class="">
+                         {{rowData.value}} 
+                      </div> 
+                    </ui-select-choices> 
+                  </ui-select> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox-dynamic" id="crn-combobox-dynamic-469486"> 
+                <div class="form-group"> 
+                  <label for="">Cidades</label> 
+                  <ui-select crn-datasource="" ng-model="datasource.active" ng-disabled="disabled" theme="bootstrap" class="crn-select" ng-required="false"> 
+                    <ui-select-match placeholder="Select..." class="">
+                       {{$select.selected}} 
+                    </ui-select-match> 
+                    <ui-select-choices repeat="rowData as rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay=""> 
+                      <div class="">
+                         {{rowData}} 
+                      </div> 
+                    </ui-select-choices> 
+                  </ui-select> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+              <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-418173"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">Telefone</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9120" class="form-control" id="input9120" placeholder=""> 
+                </div> 
+              </div> 
+              <div class="component-holder ng-binding ng-scope  col-md-5" data-component="crn-textinput" id="crn-textinput-589026"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">E-mail</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6744" class="form-control" id="input6744" placeholder=""> 
+                </div> 
+              </div><div class="component-holder ng-binding ng-scope  col-md-5" data-component="crn-textinput" id="crn-textinput-874267"> 
+                <div class="form-group"> 
+                  <label for="exampleInputEmail1">% Carga Média (Regime de Carga Média Tribut.)</label> 
+                  <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2931" class="form-control" id="input2931" placeholder=""> 
+                </div> 
+              </div> 
+               
+            </div> 
+             
+          </div> 
+        </div> 
+        <div class="row component-holder col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-287508" style="margin-top: 10px"> 
+           
+        </div> 
+      </div> 
+      <div role="tabpanel" class="tab-pane" id="tab2344"> 
+        <div class="" data-container="true"></div> 
+        <div class="column col-xs-6 col-md-12" data-container="true" data-replace="false" style="margin-top: 10px"> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinputbutton" id="crn-textinputbutton-codpro"> 
+            <div> 
+              <label class="form-group" for="btnBuscaProd">Cód. Prod.</label> 
+              <div class="input-group"> 
+                <input id="inputButton6888" style="margin-top: -10px" type="text" mask="" mask-placeholder="" ng-required="false" class="form-control" ng-model="empresas.active.cod_cid" placeholder=""> 
+                <div class="input-group-btn"> 
+                  <button class="btn component-holder btn-default" style="margin-top: -10px" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-306697"><i class="glyphicon glyphicon-search"></i> <span></span></button> 
+                </div> 
+              </div> 
+              <!-- /input-group --> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-4" data-component="crn-textinput" id="crn-textinput-7893122" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Descrição do Produto</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input66542" class="form-control" id="input6654" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-1" data-component="crn-textinput" id="crn-textinput-7893122" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Unid.</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input66542" class="form-control" id="input6654" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-1" data-component="crn-textinput" id="crn-textinput-7893122" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Qtde.</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input66542" class="form-control" id="input6654" placeholder="" ng-readonly=""> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-7893122" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Valor Unit.</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input66542" class="form-control" id="input6654" placeholder="" ng-readonly=""> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinput" id="crn-textinput-7893122" style="margin-left: -20px"> 
+            <div class="form-group"> 
+              <label for="exampleInputEmail1">Valor Total</label> 
+              <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input66542" class="form-control" id="input6654" placeholder="" ng-readonly="true"> 
+            </div> 
+          </div> 
+          <button class="btn col-md-1 btn-success" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-success" data-component="crn-button" style="width: 40px; height: 41px; margin-top: 22px; margin-left: 10px"><i class="glyphicon glyphicon-save"></i> <span></span></button> 
+          <div class="component-holder ng-binding ng-scope col-md-12" data-component="crn-button" id="crn-button-174493"></div> 
+        </div> 
+        <div class="column col-xs-6 col-md-12" data-container="true" data-replace="false" style="margin-top: -5px"> 
+          <div class="component-holder ng-binding ng-scope col-xs-12  col-md-11" data-component="crn-grid" id="crn-grid-420568"> 
+            <div crn-datasource=""> 
+              <table class="table table-bordered table-hover"> 
+                <thead> 
+                  <tr class="table-header"> 
+                    <th class="active col-md-1"> 
+                      <div data-container="true">
+                         Item 
+                      </div></th> 
+                    <th class="col-md-1"> 
+                      <div data-container="true">
+                         Cód.Prod. 
+                      </div></th> 
+                    <th class="col-md-4"> 
+                      <div data-container="true">
+                         Descrição do Produto 
+                      </div></th> 
+                    <th class="col-md-1"> 
+                      <div data-container="true">
+                         Unid. 
+                      </div></th> 
+                    <th class="col-md-1"> 
+                      <div data-container="true">
+                         Qtde. 
+                      </div></th> 
+                    <th class="col-md-2"> 
+                      <div data-container="true">
+                         Valor Unit (R$) 
+                      </div></th> 
+                    <th class="col-md-2"> 
+                      <div data-container="true">
+                         Valor Total (R$) 
+                      </div></th> 
+                  </tr> 
+                </thead> 
+                <tbody> 
+                  <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+                    <td class="active"> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                    <td> 
+                      <div data-container="true">
+                         Column Content 2 
+                      </div></td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+              <div class="table-footer-controls"> 
+                <button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button> 
+              </div> 
+            </div> 
+          </div> 
+          <button class="btn btn-danger" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" style="margin-left: -10px"><i class="glyphicon glyphicon-trash"></i> <span></span></button> 
+          <div class="component-holder ng-binding ng-scope col-xs-12 col-md-12" data-component="crn-button" id="crn-button-456999"></div> 
+        </div> 
+      </div> 
+      <div role="tabpanel" class="tab-pane" id="tab7500"> 
+        <div class="row component-holder" data-component="crn-horizontal-container" id="crn-horizontal-container-668922"> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-left: 15px; margin-top: 10px"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-273347"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Base ICMS</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2518" class="form-control" id="input2518" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-532072"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor ICMS</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6590" class="form-control" id="input6590" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-718348"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Base ICMS ST</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input8653" class="form-control" id="input8653" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-267639"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor ICMS ST</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5162" class="form-control" id="input5162" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-571931"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Total Serviços</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input1717" class="form-control" id="input1717" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-446330"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Total Produtos</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input6480" class="form-control" id="input6480" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="row component-holder" data-component="crn-horizontal-container" id="crn-horizontal-container-668922"> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-left: 15px; margin-top: 10px"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-61305"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor Frete</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2450" class="form-control" id="input2450" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-521308"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor Seguro</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2433" class="form-control" id="input2433" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-437914"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Outras Despesas</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9994" class="form-control" id="input9994" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-340079"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor IPI</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input8602" class="form-control" id="input8602" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-634050"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor ISSQN</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2040" class="form-control" id="input2040" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-1051593"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Total da Nota</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input1887" class="form-control" id="input1887" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+        <div class="row component-holder" data-component="crn-horizontal-container" id="crn-horizontal-container-668922"> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-left: 15px; margin-top: 10px"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-61305"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Desconto</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2450" class="form-control" id="input2450" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-521308"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Valor Funrural</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2433" class="form-control" id="input2433" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-437914"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Total Faturamento</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9994" class="form-control" id="input9994" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-340079"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">N° Itens</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input8602" class="form-control" id="input8602" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-634050"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Total A. Tributos</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2040" class="form-control" id="input2040" placeholder="" ng-readonly="true"> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div role="tabpanel" class="tab-pane" id="tab9887"> 
+        <div class="row component-holder col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-728075" style="margin-top: 10px"> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+            <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-textinputbutton" id="crn-textinputbutton-codpro"> 
+              <div> 
+                <label class="form-group" for="btnBuscaProd">Cód. Trans.</label> 
+                <div class="input-group"> 
+                  <input id="inputButton68882" style="margin-top: -10px" type="text" mask="" mask-placeholder="" ng-required="false" class="form-control" ng-model="empresas.active.cod_cid" placeholder=""> 
+                  <div class="input-group-btn"> 
+                    <button class="btn component-holder btn-default" style="margin-top: -10px" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-3066927"><i class="glyphicon glyphicon-search"></i> <span></span></button> 
+                  </div> 
+                </div> 
+                <!-- /input-group --> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-5" data-component="crn-textinput" id="crn-textinput-1007062"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Nome</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5521" class="form-control" id="input5521" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-5" data-component="crn-combobox" id="crn-combobox-241361"> 
+              <div class="form-group"> 
+                <label for="">Tipo de Frete</label> 
+                <ui-select crn-datasource="[{'key':'0','value':'POR CONTA DO EMITENTE'},{'key':'1','value':'POR CONTA DO DESTINATÁIO / REMETENTE'},{'key':'2','value':'POR CONTA DE TERCEIROS'},{'key':'9','value':'SEM FRETE'}]" ng-model="vars.combobox8451" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.value}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                    <div class="">
+                       {{rowData.value}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-3" data-component="crn-textinput" id="crn-textinput-159622"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">CNPJ / CPF</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input1272" class="form-control" id="input1272" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-307877"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">RG / Ins. Est.</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5918" class="form-control" id="input5918" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-1007062"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">CEP</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input5521" class="form-control" id="input5521" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-5" data-component="crn-textinput" id="crn-textinput-744363"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Endereço</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input4306" class="form-control" id="input4306" placeholder=""> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-306573"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Número</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input381" class="form-control" id="input381" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-4" data-component="crn-textinput" id="crn-textinput-660274"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Bairro</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2839" class="form-control" id="input2839" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-combobox" id="crn-combobox-237679"> 
+              <div class="form-group"> 
+                <label for="">UF</label> 
+                <ui-select crn-datasource="[{'key': 1,'value':'Value 1'},{'key': 2,'value':'Value 2'},{'key': 3,'value':'Value 3'}]" ng-model="vars.combobox1708" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.value}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                    <div class="">
+                       {{rowData.value}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-4" data-component="crn-combobox" id="crn-combobox-786205"> 
+              <div class="form-group"> 
+                <label for="">Cidades</label> 
+                <ui-select crn-datasource="[{'key': 1,'value':'Value 1'},{'key': 2,'value':'Value 2'},{'key': 3,'value':'Value 3'}]" ng-model="vars.combobox6388" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.value}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                    <div class="">
+                       {{rowData.value}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+          </div> 
+          <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-570034"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Quantidade</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input145" class="form-control" id="input145" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-281881"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Espécie</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input9417" class="form-control" id="input9417" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-4" data-component="crn-textinput" id="crn-textinput-206141"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Marca</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input860" class="form-control" id="input860" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-247751"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Peso Bruto</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input1144" class="form-control" id="input1144" placeholder=""> 
+              </div> 
+            </div> 
+            <div class="component-holder ng-binding ng-scope col-xs-12  col-md-2" data-component="crn-textinput" id="crn-textinput-201435"> 
+              <div class="form-group"> 
+                <label for="exampleInputEmail1">Peso Líquido</label> 
+                <input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input2379" class="form-control" id="input2379" placeholder=""> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div role="tabpanel" class="tab-pane" id="tab3302"> 
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false" style="margin-top: 10px"> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-506128"> 
+            <div class="form-group"> 
+              <label for="">Cond. Pgto.</label> 
+              <ui-select crn-datasource="[{'key':'1','value':'A VISTA'}]" ng-model="vars.combobox84" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-3" data-component="crn-combobox" id="crn-combobox-408806"> 
+            <div class="form-group"> 
+              <label for="">Forma de Pagamento</label> 
+              <ui-select crn-datasource="[{'key': 1,'value':'Value 1'},{'key': 2,'value':'Value 2'},{'key': 3,'value':'Value 3'}]" ng-model="vars.combobox7008" ng-required="false" ng-disabled="disabled" class="crn-select"> 
+                <ui-select-match placeholder="Select..." class="">
+                   {{$select.selected.value}} 
+                </ui-select-match> 
+                <ui-select-choices repeat="rowData.key as rowData in datasource.data | filter: $select.search" class=""> 
+                  <div class="">
+                     {{rowData.value}} 
+                  </div> 
+                </ui-select-choices> 
+              </ui-select> 
+            </div> 
+          </div> 
+          <div class="component-holder ng-binding ng-scope  col-md-2" data-component="crn-datepicker" id="crn-datepicker-554571"> 
+            <div class="form-group"> 
+              <label for="exampleInputDate">Data Venc.</label> 
+              <div style="position:relative"> 
+                <input type="date" id="date5665" class="form-control" mask="" ng-model="vars.date5665" ng-required="false"> 
+              </div> 
+            </div> 
+          </div><button class="btn btn-success" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-success" data-component="crn-button" style="margin-top: 25px"><i class="glyphicon glyphicon-ok"></i> <span></span></button> 
+           
+        </div><div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-76486">
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"><div class="component-holder ng-binding ng-scope col-xs-12  col-md-9" data-component="crn-textinput" id="crn-textinput-276945"><div class="form-group"><label for="exampleInputEmail1">Observações</label><input type="text" mask="" mask-placeholder="" ng-required="false" ng-model="vars.input4289" class="form-control" id="input4289" placeholder=""></div></div><div class="row component-holder col-xs-12 col-md-12" data-component="crn-horizontal-container" id="crn-horizontal-container-391147">
+        <div class="column col-xs-6 active col-md-12" data-container="true" data-replace="false"><div class="component-holder ng-binding ng-scope col-xs-12  col-md-10" data-component="crn-grid" id="crn-grid-472607" style="margin-left: -15px"> 
+          <div crn-datasource=""> 
+            <table class="table table-bordered table-hover"> 
+              <thead> 
+                <tr class="table-header"> 
+                  <th class="active col-md-1"> 
+                    <div data-container="true">
+                       Parcela 
+                    </div></th> 
+                  <th class="col-md-2"> 
+                    <div data-container="true">
+                       Data Venc. 
+                    </div></th> 
+                    <th class="col-md-2"> 
+                    <div data-container="true">
+                       Valor 
+                    </div></th> 
+                    <th class="col-md-7"> 
+                    <div data-container="true">
+                       Obs. 
+                    </div></th> 
+                </tr> 
+              </thead> 
+              <tbody> 
+                <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+                  <td class="active"> 
+                    <div data-container="true">
+                       Column Content 2 
+                    </div></td> 
+                  <td> 
+                    <div data-container="true">
+                       Column Content 2 
+                    </div></td> 
+                    <td> 
+                    <div data-container="true">
+                       Column Content 2 
+                    </div></td> 
+                    <td> 
+                    <div data-container="true">
+                       Column Content 2 
+                    </div></td> 
+                </tr> 
+              </tbody> 
+            </table> 
+            <div class="table-footer-controls"> 
+              <button class="btn btn-default btn-block btn-clicked" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">Load more...</button> 
+            </div> 
+          </div> 
+        </div><button class="btn btn-danger" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-danger" data-component="crn-button" style="margin-top: 0px"><i class="glyphicon glyphicon-trash"></i> <span></span></button></div>
+        
+      </div></div>
+        
+      </div> 
+         
+      </div> 
+    </div> 
+  </div> 
+</div> 
+<div class="modal fade col-md-12" id="modal49569"> 
+  <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <div class="component-holder modal-header"> 
+        <div class="list-group list-group-sm row"> 
+          <div data-container="true" data-replace="true">
+             HEADER 
+          </div> 
+        </div> 
+      </div> 
+      <div class="modal-body"> 
+        <div class="list-group list-group-sm row"> 
+          <div data-container="true" data-replace="true">
+             BODY 
+          </div> 
+        </div> 
+      </div> 
+      <div class="modal-footer"> 
+        <div class="list-group list-group-sm row"> 
+          <div data-container="true" data-replace="true">
+             FOOTER 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>

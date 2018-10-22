@@ -1,0 +1,618 @@
+<h3></h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="parceiros.startInserting()" ng-hide="parceiros.inserting || parceiros.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="parceiros" entity="api/cronapi/crud/app.entity.parceiros" keys="cod_par" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-parceiros">
+    <div crn-datasource="parceiros" class="" ng-hide="parceiros.editing || parceiros.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Cód. Emp.</div>
+                </th>
+                <th class="">
+                    <div class="">Razão Social</div>
+                </th>
+                <th class="">
+                    <div class="">Nome Fantazia</div>
+                </th>
+                <th class="">
+                    <div class="">CNPJ / CPF</div>
+                </th>
+                <th class="">
+                    <div class="">RG / IE</div>
+                </th>
+                <th class="">
+                    <div class="">IM</div>
+                </th>
+                <th class="">
+                    <div class="">CEP</div>
+                </th>
+                <th class="">
+                    <div class="">Endereço</div>
+                </th>
+                <th class="">
+                    <div class="">Número</div>
+                </th>
+                <th class="">
+                    <div class="">Bairro</div>
+                </th>
+                <th class="">
+                    <div class="">Cód. Cid.</div>
+                </th>
+                <th class="">
+                    <div class="">Telefone 1</div>
+                </th>
+                <th class="">
+                    <div class="">Telefone 2</div>
+                </th>
+                <th class="">
+                    <div class="">Fax</div>
+                </th>
+                <th class="">
+                    <div class="">Orgão</div>
+                </th>
+                <th class="">
+                    <div class="">Tipo Pessoa</div>
+                </th>
+                <th class="">
+                    <div class="">Tipo Par. Contador</div>
+                </th>
+                <th class="">
+                    <div class="">Tipo  Par. Emitente</div>
+                </th>
+                <th class="">
+                    <div class="">Tipo  Par.  Cliente</div>
+                </th>
+                <th class="">
+                    <div class="">Perc. Carga  Média</div>
+                </th>
+                <th class="">
+                    <div class="">Cód. Tipo Contrib.</div>
+                </th>
+                <th class="">
+                    <div class="">Consumidor Final</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_par  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.razao  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.fantazia  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cnpj_cpf  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.rg_ie  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.im  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cep  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.endereco  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.numero  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.bairro  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_cid  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.telefone1  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.telefone2  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.fax  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.orgao  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.tipo_pessoa  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.tipo_par_cont  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.tipo_par_emit  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.tipo_par_clie  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.perc_carga_media  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cod_tip_contribuinte  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.consumidor_final  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-parceiros">
+    <div class="form" ng-show="parceiros.editing || parceiros.inserting">
+        <form crn-datasource="parceiros" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br/>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-razao" class="">
+                    <div class="form-group">
+                        <label for="textinput-razao" class="">Razão Social</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="60"
+                                            type="text"
+                                            ng-model="parceiros.active.razao"
+                                            class="form-control"
+                                            id="textinput-razao"
+                                            placeholder="Razão Social"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-fantazia" class="">
+                    <div class="form-group">
+                        <label for="textinput-fantazia" class="">Nome Fantazia</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="60"
+                                            type="text"
+                                            ng-model="parceiros.active.fantazia"
+                                            class="form-control"
+                                            id="textinput-fantazia"
+                                            placeholder="Nome Fantazia"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cnpj_cpf" class="">
+                    <div class="form-group">
+                        <label for="textinput-cnpj_cpf" class="">CNPJ / CPF</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="17"
+                                            type="text"
+                                            ng-model="parceiros.active.cnpj_cpf"
+                                            class="form-control"
+                                            id="textinput-cnpj_cpf"
+                                            placeholder="CNPJ / CPF"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-rg_ie" class="">
+                    <div class="form-group">
+                        <label for="textinput-rg_ie" class="">RG / IE</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="15"
+                                            type="text"
+                                            ng-model="parceiros.active.rg_ie"
+                                            class="form-control"
+                                            id="textinput-rg_ie"
+                                            placeholder="RG / IE"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-im" class="">
+                    <div class="form-group">
+                        <label for="textinput-im" class="">IM</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="15"
+                                            type="text"
+                                            ng-model="parceiros.active.im"
+                                            class="form-control"
+                                            id="textinput-im"
+                                            placeholder="IM"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cep" class="">
+                    <div class="form-group">
+                        <label for="textinput-cep" class="">CEP</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="10"
+                                            type="text"
+                                            ng-model="parceiros.active.cep"
+                                            class="form-control"
+                                            id="textinput-cep"
+                                            placeholder="CEP"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-endereco" class="">
+                    <div class="form-group">
+                        <label for="textinput-endereco" class="">Endereço</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="60"
+                                            type="text"
+                                            ng-model="parceiros.active.endereco"
+                                            class="form-control"
+                                            id="textinput-endereco"
+                                            placeholder="Endereço"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-numero" class="">
+                    <div class="form-group">
+                        <label for="textinput-numero" class="">Número</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="15"
+                                            type="text"
+                                            ng-model="parceiros.active.numero"
+                                            class="form-control"
+                                            id="textinput-numero"
+                                            placeholder="Número"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-bairro" class="">
+                    <div class="form-group">
+                        <label for="textinput-bairro" class="">Bairro</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="60"
+                                            type="text"
+                                            ng-model="parceiros.active.bairro"
+                                            class="form-control"
+                                            id="textinput-bairro"
+                                            placeholder="Bairro"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cod_cid" class="">
+                    <div class="form-group">
+                        <label for="textinput-cod_cid" class="">Cód. Cid.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="parceiros.active.cod_cid"
+                                            class="form-control"
+                                            id="textinput-cod_cid"
+                                            placeholder="Cód. Cid."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-telefone1" class="">
+                    <div class="form-group">
+                        <label for="textinput-telefone1" class="">Telefone 1</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="13"
+                                            type="text"
+                                            ng-model="parceiros.active.telefone1"
+                                            class="form-control"
+                                            id="textinput-telefone1"
+                                            placeholder="Telefone 1"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-telefone2" class="">
+                    <div class="form-group">
+                        <label for="textinput-telefone2" class="">Telefone 2</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="13"
+                                            type="text"
+                                            ng-model="parceiros.active.telefone2"
+                                            class="form-control"
+                                            id="textinput-telefone2"
+                                            placeholder="Telefone 2"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-fax" class="">
+                    <div class="form-group">
+                        <label for="textinput-fax" class="">Fax</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="13"
+                                            type="text"
+                                            ng-model="parceiros.active.fax"
+                                            class="form-control"
+                                            id="textinput-fax"
+                                            placeholder="Fax"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-orgao" class="">
+                    <div class="form-group">
+                        <label for="textinput-orgao" class="">Orgão</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="6"
+                                            type="text"
+                                            ng-model="parceiros.active.orgao"
+                                            class="form-control"
+                                            id="textinput-orgao"
+                                            placeholder="Orgão"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-tipo_pessoa" class="">
+                    <div class="form-group">
+                        <label for="textinput-tipo_pessoa" class="">Tipo Pessoa</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="1"
+                                            type="text"
+                                            ng-model="parceiros.active.tipo_pessoa"
+                                            class="form-control"
+                                            id="textinput-tipo_pessoa"
+                                            placeholder="Tipo Pessoa"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-tipo_par_cont" class="">
+                    <div class="form-group">
+                        <label for="textinput-tipo_par_cont" class="">Tipo Par. Contador</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="checkbox"
+                                            ng-model="parceiros.active.tipo_par_cont"
+                                            class="form-control"
+                                            id="textinput-tipo_par_cont"
+                                            placeholder="Tipo Par. Contador"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-tipo_par_emit" class="">
+                    <div class="form-group">
+                        <label for="textinput-tipo_par_emit" class="">Tipo  Par. Emitente</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="checkbox"
+                                            ng-model="parceiros.active.tipo_par_emit"
+                                            class="form-control"
+                                            id="textinput-tipo_par_emit"
+                                            placeholder="Tipo  Par. Emitente"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-tipo_par_clie" class="">
+                    <div class="form-group">
+                        <label for="textinput-tipo_par_clie" class="">Tipo  Par.  Cliente</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="checkbox"
+                                            ng-model="parceiros.active.tipo_par_clie"
+                                            class="form-control"
+                                            id="textinput-tipo_par_clie"
+                                            placeholder="Tipo  Par.  Cliente"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-perc_carga_media" class="">
+                    <div class="form-group">
+                        <label for="textinput-perc_carga_media" class="">Perc. Carga  Média</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="number"
+                                            ng-model="parceiros.active.perc_carga_media"
+                                            class="form-control"
+                                            id="textinput-perc_carga_media"
+                                            placeholder="Perc. Carga  Média"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cod_tip_contribuinte" class="">
+                    <div class="form-group">
+                        <label for="textinput-cod_tip_contribuinte" class="">Cód. Tipo Contrib.</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="parceiros.active.cod_tip_contribuinte"
+                                            class="form-control"
+                                            id="textinput-cod_tip_contribuinte"
+                                            placeholder="Cód. Tipo Contrib."
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-consumidor_final" class="">
+                    <div class="form-group">
+                        <label for="textinput-consumidor_final" class="">Consumidor Final</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="checkbox"
+                                            ng-model="parceiros.active.consumidor_final"
+                                            class="form-control"
+                                            id="textinput-consumidor_final"
+                                            placeholder="Consumidor Final"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->
